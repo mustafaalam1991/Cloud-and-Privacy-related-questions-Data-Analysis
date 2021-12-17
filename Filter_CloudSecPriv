@@ -1,0 +1,18 @@
+SELECT id, title, body, creation_date, last_activity_date, tags, view_count FROM bigquery-public-data.stackoverflow.posts_questions 
+WHERE UPPER(body) LIKE UPPER('%cloud%') AND ( UPPER(body) LIKE UPPER('%VM%') 
+OR UPPER(body) LIKE UPPER('%key pair%') 
+OR UPPER(body) LIKE UPPER('%Instance%') 
+OR UPPER(body) LIKE UPPER('%privacy%') 
+OR UPPER(body) LIKE UPPER('%security groups%') 
+OR UPPER(body) LIKE UPPER('%ACL%') 
+OR UPPER(body) LIKE UPPER('%encryption%') 
+OR UPPER(body) LIKE UPPER('%decryption%') 
+OR UPPER(body) LIKE UPPER('%Configuration Management%') 
+OR UPPER(body) LIKE UPPER('%ssh%') 
+OR UPPER(body) LIKE UPPER('%identity access managment%') 
+OR UPPER(body) LIKE UPPER('%VPC%') 
+OR UPPER(body) LIKE UPPER('%inbound rules%') 
+OR UPPER(body) LIKE UPPER('%outbound rules%') 
+OR UPPER(body) LIKE UPPER('%tunnel%') 
+OR UPPER(body) LIKE UPPER('%SSL%') 
+OR UPPER(body) LIKE UPPER('%Certificate Manager%') );
